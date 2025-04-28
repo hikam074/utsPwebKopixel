@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            min-height: 3rem;
+            height: auto;
+            width: 100%;
+            display: block;
+            text-align: center;
+            background-repeat: no-repeat;
+            padding-bottom: 5rem;
+            z-index: 0;
+            color: white;
+        }
+        header h3 {
+            margin: 4rem 0 1rem 0;
+        }
+        header p {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .sort-by {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        #sort-by-text {
+            margin-bottom: 0;
+            padding: 1rem;
+        }
+        .product-dropdown {
+            width: auto;
+        }
+        .dropdown {
+            border: 1px solid #1E2231;
+        }
+        .dropdown:hover {
+            background-color: white;
+            box-shadow: 0 20px 30px rgba(30, 34, 49, 0.2);
+        }
+
+        .coffee-filler {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 350px;
+            padding: 2rem 0;
+            width: 100%;
+        }
+        .coffee-filler img {
+            height: 90%;
+        }
+
+        .product {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+        <div class="nav-flex">
+            <div><a href="index.html#home-section" class="nav-link">Home</a></div>
+            <div><a href="index.html#us-section" class="nav-link">Tentang Kami</a></div>
+            <div>
+                <a class="nav-link" id="menu-toggle">Menu <span>▾</span></a>
+                <div class="menu-container" id="dropdown-menu">
+                    <div class="▲">▲</div>
+                    <div class="submenu-container">
+                        <h4>Minuman</h4>
+                        <p><a href="/coffee.html" class="nav-link-menu">Coffee</a></p>
+                        <p><a href="" class="nav-link-menu">Non - Coffee</a></p>
+                        <p><a href="" class="nav-link-menu">Boba Series</a></p>
+                        <p><a href="" class="nav-link-menu">manual Brew</a></p>
+                        <p><a href="" class="nav-link-menu">Kopixel Botol</a></p>
+                    </div>
+                    <div class="submenu-container">
+                        <h4>Makanan</h4>
+                        <p><a href="" class="nav-link-menu">Burger</a></p>
+                        <p><a href="" class="nav-link-menu">Toast</a></p>
+                        <p><a href="" class="nav-link-menu">Rice Bowl</a></p>
+                        <p><a href="" class="nav-link-menu">Snack</a></p>
+                    </div>
+                    <div class="submenu-container">
+                        <h4>Product</h4>
+                        <p><a href="" class="nav-link-menu">Bean</a></p>
+                    </div>
+                    <div class="submenu-container">
+                        <h4>Merchandise</h4>
+                        <p><a href="" class="nav-link-menu">T-Shirt</a></p>
+                        <p><a href="" class="nav-link-menu">Totebag</a></p>
+                        <p><a href="" class="nav-link-menu">Tumbler</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><a href="index.html"><img src="img/logo.png" id="nav_logo"></a></div>
+        <div class="nav-flex">
+            <div class="nav-link"><a href="index.html#gallery-section">Galeri</a></div>
+            <div class="nav-link"><a href="broadcast.html">Promo</a></div>
+            <div class="nav-link"><a href="index.html#feedback-section">Testimoni</a></div>
+        </div>
+        </div>
+    </nav>
+
+    <header style="
+        background-image: linear-gradient(rgba(16, 17, 31, 0.9), rgba(16, 17, 31, 0.9)), url('img/bg/detail-header.png'); 
+        background-size: cover; 
+        background-position: center;">
+        <div>
+            <h3>Coffee</h3>
+            <p>Menu / Minuman / <a style="color: #C69155;">Coffee</a></p>
+        </div>
+    </header>
+
+    <div class="coffee-filler">
+        <img src="img/preview/coffee-1.png" alt="">
+        <img src="img/preview/coffee-2.png" alt="">
+    </div>
+
+    <section class="product">
+        <div>
+            <div class="sort-by">
+                <div>
+                    <p id="sort-by-text">Sort By</p>
+                </div>
+                <div class="product-dropdown">
+                    <div class="dropdown" onclick="toggleDropdown(this)">
+                        <div class="dropdown-button">Semua</div>
+                        <div class="dropdown-menu">
+                            <a href="#">Semua</a>
+                            <a href="#">Terbaru</a>
+                            <a href="#">Terlama</a>
+                            <a href="#">Harga (>)</a>
+                            <a href="#">Harga (v)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card-container">
+                <div class="product-card">
+                    <img src="img/product/kopixel-latte.png" alt=""><br>
+                    <span><strong>Kopixel Latte</strong></span><br>
+                    <span class="harga">Rp. 12000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/premium-latte.png" alt=""><br>
+                    <span><strong>Premium Latte</strong></span><br>
+                    <span class="harga">Rp. 18000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/pandan-latte.png" alt=""><br>
+                    <span><strong>Pandan Latte</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/hazelnut-latte.png" alt=""><br>
+                    <span><strong>Hazelnut Latte</strong></span><br>
+                    <span class="harga">Rp. 15000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/ginger-latte.png" alt=""><br>
+                    <span><strong>Ginger Latte</strong></span><br>
+                    <span class="harga">Rp. 12000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/americano.png" alt=""><br>
+                    <span><strong>Americano</strong></span><br>
+                    <span class="harga">Rp. 10000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/avocado-coffee.png" alt=""><br>
+                    <span><strong>avocado-coffee</strong></span><br>
+                    <span class="harga">Rp. 15000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/orange-coffee.png" alt=""><br>
+                    <span><strong>Orange Coffee</strong></span><br>
+                    <span class="harga">Rp. 12000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/dalgona-coffee.png" alt=""><br>
+                    <span><strong>Dalgona Coffee</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/caramel-machiato.png" alt=""><br>
+                    <span><strong>Caramel Machiato</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/mocca-coffee.png" alt=""><br>
+                    <span><strong>Coffee Mocca</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/cappucino.png" alt=""><br>
+                    <span><strong>Cappucino</strong></span><br>
+                    <span class="harga">Rp. 12000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/regal-latte.png" alt=""><br>
+                    <span><strong>Regallate</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/oreo-latte.png" alt=""><br>
+                    <span><strong>Orelolatte</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+                <div class="product-card">
+                    <img src="img/product/chocki-coffee.png" alt=""><br>
+                    <span><strong>Kopi Choki</strong></span><br>
+                    <span class="harga">Rp. 14000</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div>
+                    <img src="img/logo.png" alt="">
+                    <div class="footer-text">
+                        <p>Jl. Sriwijaya XII-4 ,Jember, Jawa Timur 68124</p>
+                    </div>
+                </div>
+                <div class="footer-link">
+                    <a href="index.html#home-section">Home</a>
+                    <a href="index.html#us-section">Tentang Kami</a>
+                    <a href="index.html">Menu</a>
+                    <a href="index.html#gallery-section">Gallery</a>
+                    <a href="broadcast.html">Promo</a>
+                    <a href="index.html#feedback-section">Testimoni</a>
+                </div>
+            </div>
+            <p id="copyright">Copyright © 2021 Kopixel by <a href="https://pixelfood.co/">Pixelfood.co</a>. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

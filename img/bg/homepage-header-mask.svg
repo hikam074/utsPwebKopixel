@@ -1,0 +1,5 @@
+        <svg width="1440" height="733" viewBox="0 0 1440 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1440" height="733" fill="none"/> <!-- Warna latar belakang -->
+            <path d="M780.729 590C510.823 737.2 148.115 742 0.499826 726H0V0H1440V726C1332.7 619.333 1050.64 442.8 780.729 590Z" fill="rgba(16, 17, 31, 0.0)" fill-rule="evenodd"/> <!-- Area besar transparan -->
+            <path d="M780.729 590C510.823 737.2 148.115 742 0.499826 726H0V726H1440V726C1332.7 619.333 1050.64 442.8 780.729 590Z" fill="#ffffff" fill-rule="evenodd"/> <!-- Area kecil menjadi putih -->
+        </svg>
